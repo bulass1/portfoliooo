@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #222;
+      color: #fff;
+    }
+
+    header {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #f5c542;
+      left: 0;
+      bottom: -5px;
+      transition: width 0.3s ease;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    nav ul li a:hover {
+      color: #f5c542;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: url('img/hero.jpg') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-bottom: 20px;
+      /* Adjust margin for smooth transition to the next section */
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      z-index: 1;
+      text-align: center;
+      color: #fff;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      animation: fadeInDown 1.5s ease;
+    }
+
+    /* Portfolio Section */
+    #portfolio {
+      padding: 40px 20px;
+      /* Adjust padding */
+      text-align: center;
+      background-color: #333;
+      /* Ensure background color is consistent */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    #portfolio h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      /* Reduced gap */
+      width: 100%;
+      text-align: center;
+    }
+
+    .project {
+      margin: 20px;
+      flex: 1 1 calc(30% - 40px);
+      max-width: 300px;
+    }
+
+    .project img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>About Me</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="skills.html">RESUME/CV</a></li>
+        <li><a href="portfolio.html">PORTFOLIO</a></li>
+        <li><a href="certificate.html">CERTIFICATE</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h2>My Projects</h2> <!-- New title added -->
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>My Projects</h2> <!-- Changed title to "My Project" -->
+    <div class="project">
+      <h3>SAS17 Form</h3>
+      <a href="img/ss.png" target="_blank">
+        <img src="img/ss.png" alt="Project Screenshot">
+      </a>
+    </div>
+    <div class="project">
+      <h3>Arkquest App</h3>
+      <a href="img/APP.jpg" target="_blank">
+        <img src="img/APP.jpg" alt="Project Screenshot">
+      </a>
+    </div>
+    <div class="project">
+      <h3>Arkquest Website</h3>
+      <p>Sign up</p>
+      <a href="img/ARKQUEST.png" target="_blank">
+        <img src="img/ARKQUEST.png" alt="Project Screenshot">
+      </a>
+    </div>
+    <div class="project">
+      <a href="img/3.png" target="_blank">
+        <img src="img/3.png" alt="Project Screenshot">
+      </a>
+    </div>
+    <div class="project">
+      <a href="img/4.png" target="_blank">
+        <img src="img/4.png" alt="Project Screenshot">
+      </a>
+    </div>
+    <div class="project">
+      <a href="img/5.jpg" target="_blank">
+        <img src="img/5.jpg" alt="Project Screenshot">
+      </a>
+    </div>
+    <div class="project">
+      <a href="img/6.jpg" target="_blank">
+        <img src="img/6.jpg" alt="Project Screenshot">
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2024 Gian Rey Marc A. Esteban. All rights reserved.
+  </footer>
+</body>
+
+</html>

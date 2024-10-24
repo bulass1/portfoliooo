@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #222;
+      color: #fff;
+    }
+
+    header {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #f5c542;
+      left: 0;
+      bottom: -5px;
+      transition: width 0.3s ease;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    nav ul li a:hover {
+      color: #f5c542;
+    }
+
+    /* About Section */
+    .about {
+      height: 100vh;
+      background: url('img/about-bg.jpg') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding-bottom: 50px;
+    }
+
+    .about-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .about-content {
+      z-index: 1;
+      text-align: center;
+      color: #fff;
+    }
+
+    .about img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .about h2 {
+      font-size: 48px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      animation: fadeInDown 1.5s ease;
+    }
+
+    .about p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      max-width: 600px;
+      line-height: 1.6;
+      margin: 0 auto;
+      animation: fadeInUp 2s ease;
+    }
+
+    /* Skills Section */
+    .skills-section {
+      background-color: #333;
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .skills-section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #f5c542;
+    }
+
+    .skills-section p {
+      font-size: 16px;
+      color: #ddd;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      background-color: #333;
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #f5c542;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .contact-form input {
+      background-color: #444;
+      color: #fff;
+    }
+
+    .contact-form textarea {
+      background-color: #444;
+      color: #fff;
+      resize: none;
+    }
+
+    .contact-form button {
+      padding: 10px;
+      background-color: #f5c542;
+      border: none;
+      border-radius: 5px;
+      color: #222;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #e1b740;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>About Me</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="skills.html">RESUME/CV</a></li>
+        <li><a href="portfolio.html">PORTFOLIO</a></li>
+        <li><a href="certificate.html">CERTIFICATE</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="about">
+    <div class="about-overlay"></div>
+    <div class="about-content">
+      <img src="img/gian.jpg" alt="Gian Reymarc A. Esteban">
+      <h2>About Me</h2>
+      <p>Hi, I'm Gian Reymarc A. Esteban, a 20-year-old college student from AU South. My passion is web design,
+        and I'm proficient in creating websites using HTML and CSS. My goal is to become a professional web
+        designer and a top-tier player in online gaming.</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills-section">
+    <h2>My Skills</h2>
+    <h2>Web Design</h2>
+    <p>Fixing and creating a design for websites. With a keen eye for detail, I craft responsive and visually
+      appealing websites to ensure user engagement and satisfaction.</p>
+  </section>
+
+  <section class="skills-section">
+    <h2>Graphic Design</h2>
+    <p>A craft where professionals create visual content to communicate messages. My expertise lies in creating
+      appealing visual designs that resonate with target audiences, combining functionality with aesthetics.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Contact Me</h2>
+    </form>
+    <p>You can also reach me at:</p>
+    <p>Phone: 09953771205</p>
+    <p>Email: giag.esteban.au@phinmaed.com</p>
+    <p>Personal Email: gianesteban0419@gmail.com</p>
+  </section>
+
+  <footer>
+    &copy; 2024 Gian Reymarc A. Esteban. All rights reserved.
+  </footer>
+</body>
+
+</html>
